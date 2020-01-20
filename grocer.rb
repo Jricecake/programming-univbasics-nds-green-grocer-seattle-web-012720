@@ -93,7 +93,7 @@ def checkout(cart, coupons)
   subtotal = 0
   
   while i < final_cart.length do
-    subtotal += final_cart[i][price]
+    subtotal += final_cart[i][:price]
   end
   i += 1
   if subtotal > 100
