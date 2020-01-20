@@ -58,7 +58,7 @@ def apply_coupons(cart, coupons)
         :clearance => discounted_item[:clearance]
       }
       cart << applied_coupon_item
-      discounted_item[i] -= coupons[i][:num]
+      discounted_item[:count] -= coupons[i][:num]
       binding.pry
     end
   end
