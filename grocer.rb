@@ -86,6 +86,23 @@ def apply_clearance(cart)
 end
 
 def checkout(cart, coupons)
+  consolidated_cart = consolidate_cart(cart)
+  couponed_cart = apply_coupons(consolidated_cart_cart, coupons)
+  final_cart = apply_clearance(couponed_cart)
+  i = 0
+  
+  while i < final_cart.length do
+    subtotal = 0
+    subtotal += final_cart[i][price]
+  end
+  i += 1
+  if subtotal > 100
+    grand_total = (subtotal - (subtotal * 0.1)).round(2)
+    return grand_total
+  else
+    return subtotal
+  end
+  
   # Consult README for inputs and outputs
   #
   # This method should call
