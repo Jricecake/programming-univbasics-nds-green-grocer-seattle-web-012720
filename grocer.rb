@@ -100,7 +100,7 @@ def checkout(cart, coupons)
     grand_total -= (subtotal - (subtotal * 0.1)).round(2)
   end
     subtotal
-  end
+  
   
   # Consult README for inputs and outputs
   #
