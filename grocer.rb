@@ -59,12 +59,12 @@ def apply_coupons(cart, coupons)
       }
       cart << applied_coupon_item
       discounted_item[:count] -= coupons[i][:num]
-      binding.pry
+      #binding.pry
     end
   end
   i += 1
 end
-  applied_discounts
+  cart
   # Consult README for inputs and outputs
   #
   # REMEMBER: This method **should** update cart
