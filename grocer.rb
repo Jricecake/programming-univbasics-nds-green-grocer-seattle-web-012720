@@ -90,17 +90,16 @@ def checkout(cart, coupons)
   couponed_cart = apply_coupons(consolidated_cart, coupons)
   final_cart = apply_clearance(couponed_cart)
   i = 0
-  subtotal = 0
+  total = 0
   
   while i < final_cart.length do
-    subtotal += final_cart[i][:price]
+    total += final_cart[i][:price]
   end
   i += 1
-  if subtotal > 100
-    grand_total -= (subtotal - (subtotal * 0.1)).round(2)
-    
+  if total > 100
+    total -= (total - (total * 0.1)).round(2)
   end
-    subtotal
+    total
   
   
   # Consult README for inputs and outputs
