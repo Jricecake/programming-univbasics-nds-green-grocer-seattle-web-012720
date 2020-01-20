@@ -90,9 +90,9 @@ def checkout(cart, coupons)
   couponed_cart = apply_coupons(consolidated_cart, coupons)
   final_cart = apply_clearance(couponed_cart)
   i = 0
+  subtotal = 0
   
   while i < final_cart.length do
-    subtotal = 0
     subtotal += final_cart[i][price]
   end
   i += 1
