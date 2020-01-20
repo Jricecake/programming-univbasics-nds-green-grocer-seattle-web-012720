@@ -97,7 +97,7 @@ def checkout(cart, coupons)
   end
   i += 1
   if subtotal > 100
-    grand_total = (subtotal - (subtotal * 0.1)).round(2)
+    grand_total -= (subtotal - (subtotal * 0.1)).round(2)
     return grand_total
   else
     return subtotal
